@@ -23,3 +23,33 @@ public class Polymorphism {
 		}
 	}
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public abstract class User{
+	public String firstName;
+	public String lastName;
+	
+	public abstract void sayHello();
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Student extends User{
+	public String major;
+	
+	@Override
+	public void sayHello() {
+		System.out.println("I am " + firstName + " " + lastName + ". My major is " + major + ".");
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Teacher extends User{
+	
+	@Override
+	public void sayHello() {
+		System.out.println("My name is " + firstName + " " + lastName + " and I am a teacher.");
+	}
+}
