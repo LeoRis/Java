@@ -68,9 +68,6 @@ public class MergeSort {
         System.out.println( "\nelements after sorting");
         printarray(a);
        
-  }
- 
-  
-    
+    }  
        
 }
