@@ -44,10 +44,6 @@ public class Consultancies {
 	    	imeStudentiKratkiPrasanjaZadaci[i] = pom[0];
 	    	redKratkiPrasanjaZadaci.enqueue(imeStudentiKratkiPrasanjaZadaci[i]);
 	    }
-	    
-	    
-	    // Vasiot kod ovde...
-		
 	
 	}
 }
