@@ -43,3 +43,56 @@ public class MovieTest {
 	}
 
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Comparator;
+
+public class CoefRatingComparator implements Comparator<Movie> {
+	int maxRatings;
+	
+	public CoefRatingComparator(int maxRatings) {
+		this.maxRatings = maxRatings;
+	}
+
+	@Override
+	public int compare(Movie o1, Movie o2) {
+		int ar = Double.compare(o1.avgRating * o1.ratings.size() / maxRatings, o2.avgRating * o2.ratings.size() / maxRatings);
+		
+		if(ar == 0) {
+			return o1.title.compareTo(o2.title);
+		}
+		return -ar;
+	}
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class MovieList {
+	List<Movie> movies;
+	
+	public MovieList() {
+		movies = new ArrayList<>();
+	}
+	
+	public void addMovie(String title, int[] ratings) {
+		Movie movie = new Movie(title, ratings);
+		movies.add(movie);
+	}
+	
+	public List<Movie> top10ByAvgRating(){
+		return movies.stream().sorted(Comparator.comparing(Movie::getAvgRating).reversed().thenComparing(Comparator.comparing(Movie::getTitle))).limit(10).collect(Collectors.toList());
+	}
+	
+	public List<Movie> top10ByRatingCoef(){
+		int maxRatings = movies.stream().map(movie -> movie.ratings.size()).reduce(0, Math::max);
+		
+		return movies.stream().sorted(new CoefRatingComparator(maxRatings)).limit(10).collect(Collectors.toList());
+	}
+}
