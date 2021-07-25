@@ -32,8 +32,6 @@ public class Travel {
 		return !(Collections.disjoint(Arrays.asList(names), Arrays.asList(passengerNames)));
 	}
 	
-	// passengerNames[3] {"leo", null, null}
-	
 	public void addPassenger(String passenger) throws OutOfMemoryError, IllegalArgumentException {
 	
 		for(Object i : passengerNames) {
