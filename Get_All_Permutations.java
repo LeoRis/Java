@@ -1,5 +1,3 @@
-
-
 public class Get_All_Permutations {
 
 	public static void getPemutations(int[] array) {
