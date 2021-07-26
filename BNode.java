@@ -1,4 +1,3 @@
-
 public class BNode<E> {
 	public E info;
 	public BNode<E> left;
