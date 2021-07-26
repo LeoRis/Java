@@ -1,7 +1,7 @@
 import java.util.Scanner;
+
 public class MergeSort {
- 
- 
+  
  public static void merge(int[] a, int l, int m, int h) {  
        int i, j, c = l;
        int b[] = new int[h + 1];
