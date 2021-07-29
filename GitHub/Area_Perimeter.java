@@ -18,7 +18,8 @@ public class Area_Perimeter {
 			System.out.printf("Circle perimeter with radius %f is %f\n", r, perimeterCircle);
 			
 			System.out.printf("Circle area with radius %f is %f\n", r, areaCircle);		
-		}else if(choice == 2) {
+		}
+		else if(choice == 2) {
 			System.out.println("Square side: \na = ");
 			
 			int a = input.nextInt();
@@ -28,7 +29,8 @@ public class Area_Perimeter {
 			System.out.printf("Square perimeter with side %d is %d\n", a, perimeterSquare);
 			
 			System.out.printf("Square area with side %d is %d\n", a, areaSquare);
-		}else {
+		}
+		else {
 			System.out.println("Invalid choice!");
 		}
 	}
