@@ -32,6 +32,31 @@ public class FirstNonRepeatingCharacter {
 		return '_';
 	}
 	
+	public static char findFirstNonRepeatingChar3(String s) {
+		
+		HashMap<Character, Integer> char_counts = new HashMap();
+		
+		for(int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if(char_counts.containsKey(c)) {
+				char_counts.put(c, char_counts.get(c) + 1);
+			}
+			else {
+				char_counts.put(c, 1);
+			}
+		}
+		
+		for(int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if(char_counts.get(c) == 1) {
+				return c;
+			}
+		}
+		
+		return '_';
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -41,6 +66,7 @@ public class FirstNonRepeatingCharacter {
 		
 		System.out.println("First method test: " + findFirstNonRepeatingChar(testSample));
 		System.out.println("Second method test: " + findFirstNonRepeatingChar2(testSample));
+		System.out.println("Third method test: " + findFirstNonRepeatingChar3(testSample));
 		
 		input.close();
 	}
