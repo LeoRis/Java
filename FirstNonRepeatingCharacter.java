@@ -14,6 +14,24 @@ public class FirstNonRepeatingCharacter {
 		
 	}
 	
+	public static char findFirstNonRepeatingChar2(String s) {
+	
+		for(int i = 0; i < s.length(); i++) {
+			boolean flag = false;
+			for(int j = 0; j < s.length(); j++) {
+				if(s.charAt(i) == s.charAt(j) && (i != j)) {
+					flag = true;
+					break;
+				}
+			}
+			if(!flag) {
+				return s.charAt(i);
+			}
+		}
+			
+		return '_';
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -21,8 +39,8 @@ public class FirstNonRepeatingCharacter {
 		System.out.println("Insert your test sample string: ");
 		String testSample = input.nextLine();
 		
-		System.out.print("The first non-repeating character is: ");
-		System.out.print(findFirstNonRepeatingChar(testSample));
+		System.out.println("First method test: " + findFirstNonRepeatingChar(testSample));
+		System.out.println("Second method test: " + findFirstNonRepeatingChar2(testSample));
 		
 		input.close();
 	}
