@@ -65,9 +65,10 @@ public class ProductExceptSelf {
 			mainArray[i] = input.nextInt();
 		}
 		
-		
+		System.out.println("Here is solution #1: ");
 		solution(mainArray);
 		
+		System.out.println("Here is solution #2: ");
 		solution2(mainArray);
 		
 		input.close();
