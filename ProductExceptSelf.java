@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ProductExceptSelf {
 
+	// O(n)
 	public static void solution(int[] nums) {
 		int N = nums.length;
 		int product = 1;
@@ -19,6 +20,7 @@ public class ProductExceptSelf {
 		}
 	}
 	
+	// O(n)
 	public static void solution2(int[] nums) {
 		int N = nums.length;
 		
@@ -48,6 +50,28 @@ public class ProductExceptSelf {
 		
 	}
 	
+	// O(n) - best space complexity
+	public static void solution3(int[] nums) {
+		int N = nums.length;
+		
+		int[] output = new int[N];
+		
+		output[0] = 1;
+		for(int i = 1; i < N; i++) {
+			output[i] = nums[i - 1] * output[i - 1];
+		}
+		
+		int R = 1;
+		for(int i = N - 1; i >= 0; i--) {
+			 output[i] *= R;
+			 R *= nums[i];
+		}
+		
+		for(int i = 0; i < N; i++) {
+			System.out.println(output[i]);
+		}
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -71,6 +95,9 @@ public class ProductExceptSelf {
 		
 		System.out.println("Here is solution #2: ");
 		solution2(mainArray);
+		
+		System.out.println("Here is solution #3: ");
+		solution3(mainArray);
 		
 		input.close();
 		
