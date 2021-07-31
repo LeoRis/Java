@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class ProductExceptSelf {
 
-	public static void solution(int[] input) {
+	public static void solution(int[] nums) {
+		int N = nums.length;
 		int product = 1;
-		int[] output = new int[input.length];
-		for(int i = 0; i < input.length; i++) {
-			product *= input[i];
+		int[] output = new int[nums.length];
+		for(int i = 0; i < N; i++) {
+			product *= nums[i];
 		}
 		
-		for(int i = 0; i < input.length; i++) {
-			output[i] = product / input[i];
+		for(int i = 0; i < N; i++) {
+			output[i] = product / nums[i];
 		}
 		
 		for(int i = 0; i < output.length; i++) {
