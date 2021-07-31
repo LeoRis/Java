@@ -45,7 +45,6 @@ public class ProductExceptSelf {
 			System.out.println(output[i]);
 		}
 		
-//		return output;
 	}
 	
 	public static void main(String[] args) {
