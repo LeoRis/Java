@@ -44,6 +44,8 @@ public class FindLongestSubarrayBySum {
 		
 		System.out.println("The longest subarray is between these indicies: ");
 		System.out.println(Arrays.toString(longestSubarray(sum, testArray)));
+		
+		input.close();
 	}
 
 }
