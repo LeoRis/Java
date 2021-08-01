@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class FindLongestSubarrayBySum {
 
+	// Liner time complexity O(n)
 	public static int[] longestSubarray(int s, int[] array) {
 		int[] result = new int[] {-1};
 		
