@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-
 public class SortedSquaredArray {
 	
 	public static int[] solution(int[] array) {
@@ -54,6 +53,7 @@ public class SortedSquaredArray {
 		
 		System.out.println("The squared sorted array is (solution 2): ");
 		System.out.println(Arrays.toString(solution2(testArray)));
+		
 		input.close();
 
 	}
