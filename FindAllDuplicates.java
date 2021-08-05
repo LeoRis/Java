@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class FindAllDuplicates {
 	
+	// O(n) time complexity
 	public static List<Integer> solution(int[] array) {
 		int N = array.length;
 		List<Integer> result = new ArrayList();
