@@ -13,14 +13,9 @@ public class FindAllDuplicates {
 			int index = Math.abs(array[i]) - 1;
 			if(array[index] < 0) {
 				result.add(index + 1);
-				array[index] = -array[index];
 			}
+			array[index] = -array[index];
 		}
-		
-		for(int j = 0; j < result.size(); j++) {
-			System.out.println(result.get(j));
-		}
-		
 		return result;
 	}
 
@@ -40,7 +35,7 @@ public class FindAllDuplicates {
 			testArray[i] = input.nextInt();
 		}
 		
-		System.out.println(Arrays.toString((solution(testArray).toArray())));
+		System.out.println((solution(testArray)).toString());
 
 	}
 
