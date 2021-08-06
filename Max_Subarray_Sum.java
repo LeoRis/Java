@@ -17,13 +17,13 @@ public class Max_Subarray_Sum {
 		return max_sum;
 	}
 	
+	// O(n) time complexity
 	public static int windowSliding(int[] array, int n, int k) {
 		if(n < k) {
 			System.out.println("Invalid!");
 			return -1;
 		}
 
-		
 		int max_sum = 0;
 		for(int i = 0; i < k; i++) {
 			max_sum += array[i];
