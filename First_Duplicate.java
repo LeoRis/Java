@@ -37,6 +37,20 @@ public class First_Duplicate {
 		return -1;
 	}
 	
+	// O(n) time complexity / Best space solution
+	public static int solution3(int[] array) {
+		for(int i = 0; i < array.length; i++) {
+			if(array[Math.abs(array[i]) - 1] < 0) {
+				return Math.abs(array[i]);
+			}
+			else {
+				array[Math.abs(array[i]) - 1] = -array[Math.abs(array[i]) - 1];
+			}
+		}
+		
+		return -1;
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -55,6 +69,8 @@ public class First_Duplicate {
 		System.out.println("Solution #1 -> The first duplicate is: " + solution(testArray));
 
 		System.out.println("Solution #2 -> The first duplicate is: " + solution2(testArray));
+		
+		System.out.println("Solution #3 -> The first duplicate is: " + solution3(testArray));
 		
 		input.close();
 
