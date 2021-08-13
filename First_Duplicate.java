@@ -20,6 +20,23 @@ public class First_Duplicate {
 
 	}
 	
+	// O(n) time complexity / O(n) space complexity
+	public static int solution2(int[] array) {
+		int N = array.length;
+		
+		HashSet<Integer> temp = new HashSet();
+		for(int i = 0; i < N; i++) {
+			if(temp.contains(array[i])) {
+				return array[i];
+			}
+			else {
+				temp.add(i);
+			}
+		}
+		
+		return -1;
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
@@ -35,7 +52,9 @@ public class First_Duplicate {
 			testArray[i] = input.nextInt();
 		}
 		
-		System.out.println("The first duplicate is: " + solution(testArray));
+		System.out.println("Solution #1 -> The first duplicate is: " + solution(testArray));
+
+		System.out.println("Solution #2 -> The first duplicate is: " + solution2(testArray));
 		
 		input.close();
 
