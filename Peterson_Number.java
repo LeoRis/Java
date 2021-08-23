@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Peterson_Number
 {
     /* This array is to determine the factorial of single digit quickly
