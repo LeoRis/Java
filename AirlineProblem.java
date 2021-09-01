@@ -122,6 +122,8 @@ public class AirlineProblem {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Sample input file: airlines.txt
+
 Delta,Air Canada,Aero Mexico,Ocean Air
 United,Aria,Lufthansa,Ocean Air,Quantas,British Airways
 Northwest,Air Alaska,BMI,Avolar,EVA Air
