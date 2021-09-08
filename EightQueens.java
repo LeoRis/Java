@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class EightQueens {
 
-
 	public static void main(String[] args) {
 			solveNQueens(8);
 			ArrayList<char[][]> solutions = getAllNQueens(8);
