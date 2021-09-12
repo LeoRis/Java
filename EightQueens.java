@@ -35,6 +35,7 @@ public class EightQueens {
 	 * that is no queen can attack any other queen on the board.
 	 * false otherwise.
 	*/
+	
 	public static boolean queensAreSafe(char[][] board)
 	{	char[] validChars = {'q', '.'};
 		assert (board != null) && (board.length > 0)
@@ -152,6 +153,7 @@ public class EightQueens {
 	/* pre: mat != null, valid != null
 	   post: return true if all elements in mat are one of the characters in valid
 	*/
+	
 	private static boolean onlyContains(char[][] mat, char[] valid)
 	{	assert mat != null && valid != null : "Violation of precondition: onlyContains";
 
@@ -172,6 +174,7 @@ public class EightQueens {
 	/* pre: list != null
 	   post: return true if c is in list
 	*/
+	
 	private static boolean contains(char[] list, char c)
 	{	assert ( list != null ) : "Violation of precondition: contains";
 
