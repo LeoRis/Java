@@ -34,4 +34,4 @@ public class GuessingGame {
             return "Your guess is incorrect\nTry Number: " + count;
         }
     }
-}
+} 
