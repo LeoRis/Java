@@ -108,5 +108,4 @@ public class SortingAlgorithms {
 			System.out.print(array[i] + " ");
 		}
 	}
-
 }
