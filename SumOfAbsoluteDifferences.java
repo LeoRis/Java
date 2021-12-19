@@ -38,6 +38,5 @@ public class SumOfAbsoluteDifferences {
         
         br.close();
         
-    }
-    
+    }    
 }
