@@ -16,5 +16,4 @@ public class Test_Hash_Table {
 		System.out.println("The bucket where \"Z\" is at is: " + m.get('Z'));
 		
 	}
-
 }
