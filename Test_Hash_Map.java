@@ -17,5 +17,4 @@ public class Test_Hash_Map {
 		System.out.println("The bucket where \"Q\" is at is: " + m.get('Q'));
 		
 	}
-
 }
