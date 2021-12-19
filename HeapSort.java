@@ -82,6 +82,5 @@ public static void main(String[] args) {
 	printarray(a);
 	
 	s.close();
-	}
- 
+	} 
 }
