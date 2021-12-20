@@ -138,6 +138,5 @@ public class SLLTree<E> implements Tree<E> {
 			printTreeRecursive(temp, level);
 			temp = temp.sibling;
 		}
-	}
-		
+	}		
 }
