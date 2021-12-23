@@ -16,6 +16,5 @@ public class BNode<E> {
 		this.info = info;
 		this.left = left;
 		this.right = right;
-	}
-	
+	}	
 }
