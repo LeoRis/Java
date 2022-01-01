@@ -14,7 +14,6 @@ public class Exercise {
 		
 		Practice<?> testObject = new Practice<Integer>();
 		testObject.setT(null);
-		
-			
+					
 	}
 }
