@@ -1,4 +1,3 @@
-
 public class Brackets {
 	public static boolean isCorrect(String phrase) {
 		ArrayStack<Character> bracketStack = new ArrayStack<Character>(100);
