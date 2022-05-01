@@ -1,4 +1,3 @@
-
 public class Min_Heap {
 	private int[] min_heap;
 	private int size = 0;
