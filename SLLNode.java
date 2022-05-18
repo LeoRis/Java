@@ -1,4 +1,5 @@
 class SLLNode<E> {
+
 	protected E element;
 	protected SLLNode<E> succ;
 
