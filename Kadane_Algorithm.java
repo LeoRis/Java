@@ -32,5 +32,4 @@ public class Kadane_Algorithm {
 		input.close();
 
 	}
-
 }
