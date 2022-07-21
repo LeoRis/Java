@@ -71,5 +71,4 @@ public class EnhancedFor
 			System.out.println(i + ", " + list[i]);
 		}
 	}
-
 }
